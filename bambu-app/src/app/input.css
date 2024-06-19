@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Opificio-rounded-bold";
+  src: url("../assets/fonts/Opificio_Bold_rounded_1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Opificio-rounded";
+  src: url("../assets/fonts/Opificio_rounded.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Opificio-neue";
+  src: url("../assets/fonts/Opificio_neue-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --primary-color: #A2D642; /* Color primario */
+  --secondary-color: #3971C1; /* Color secundario */
+}
+
+
+
+.opificio-bold {
+  font-family: "Opificio-rounded-bold";
+}
+
+.opificio-neue {
+  font-family: "Opificio-neue";
+
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+
+.body {
+  font-family: "Opificio-neue";
+}
+
+.bg-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+
+/*-------------- HOME PAGE Styles --------------------*/
+
+.bg-home {
+  background-image: url("../assets/images/image_bck.png");
+}
+.bg-home::before {
+  content: '';  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(30, 36, 59, 0.5); /* Color #1E243B con 50% de opacidad */
+}
+
+.bg-engineering {
+  background-image: url("../assets/images/image_bck_1.jpg");
+
+}
+.bg-engineering::before {
+  content: '';  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(30, 36, 59, 0.5); /* Color #1E243B con 50% de opacidad */
+}
+
+.home-title {
+  font-family: "Opificio-rounded-bold";
+  font-weight: 200;
+  letter-spacing: .5rem;
+}
+
+.title-big{
+  font-size: 4rem;
+}
+
+
+
+

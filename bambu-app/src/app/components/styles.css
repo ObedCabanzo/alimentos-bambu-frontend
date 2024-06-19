@@ -1,0 +1,59 @@
+.banner-left-container {
+  background-color: #8cc63e;
+}
+
+.banner-left-container p {
+  font-weight: 400;
+}
+
+.categories-title {
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  color: #496623;
+}
+
+
+.slider-bt-next-right {
+  background: linear-gradient(0.25turn, rgba(255, 255, 255, 0), white, white);
+
+}
+
+
+
+.slider-bt-next-left {
+  background: linear-gradient(0.25turn, white, white, rgba(255, 255, 255, 0));
+
+}
+
+.pauze-primary-color {
+  color: #a61917;
+}
+
+.pauze-secondary-color {
+  color: #402419;
+}
+
+.pauze-tertiary-color {
+  color: #708b2c;
+}
+
+.pauze-primary-bg {
+  background-color: #a61917;
+}
+
+.pauze-secondary-bg {
+  background-color: #402419;
+}
+
+.pauze-tertiary-bg1 {
+  background-color: #708b2c;
+}
+
+.pauze-tertiary-bg2 {
+  background-color: #d3daa7;
+}
+
+.pauze-button::before {
+  background: #402419;
+  z-index: 1;
+}

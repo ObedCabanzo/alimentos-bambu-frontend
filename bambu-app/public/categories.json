@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+            "id":1, 
+            "title": "Brunch",
+            "description": "¡Endulza tu día con nuestros irresistibles pancakes y waffles!"
+        }, 
+        {
+            "id":2, 
+            "title": "Bebidas",
+            "description": "¡Refresca tu dia con nuestras deliciosas malteadas, limonadas, avenas y mucho más!"
+        },
+        {
+            "id":3, 
+            "title": "Pasteleros",
+            "description": "¡Dulcifica tu día con nuestros exquisitos productos pasteleros!"
+        }
+    ],
+    "description": "Descubre nuestras selecciones de alimentos y productos"
+}

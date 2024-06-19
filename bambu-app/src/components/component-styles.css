@@ -1,0 +1,239 @@
+/*---------------------- Nav Logo Styles ---------------------- */
+
+@keyframes moveInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.circle-2 {
+  background-color: var(--secondary-color);
+}
+
+.animate-circle-1 {
+  animation: moveInFromLeft 0.5s ease-out forwards;
+}
+
+.animate-circle-2 {
+  animation: moveInFromLeft 0.5s ease-out 0.2s forwards;
+}
+
+.animate-logo {
+  animation: moveInFromLeft 0.5s ease-out 0.2s forwards;
+}
+
+/* -------------------- LATERAL COMPONENT ----------------------- */
+
+
+
+.lateral-component-container p {
+  writing-mode: vertical-rl;
+}
+
+.lateral-component-in {
+  animation: moveInFromRight ease-in-out 0.4s forwards;
+}
+
+.lateral-component-out {
+  animation: moveOutFromLeft ease-in-out 0.4s forwards;
+}
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    right: -13rem;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes moveOutFromLeft {
+  0% {
+    opacity: 1;
+    right: 0;
+
+  }
+  100% {
+    opacity: 0;
+    right: -13rem;
+  }
+}
+
+/* ------------------ SOCIAL MEDIA COMPONENT ----------------------- */
+
+.sm-component-container p {
+  writing-mode: vertical-rl;
+}
+
+.sm-component-in {
+  animation: moveInFromLeft-sm ease-in-out 0.4s forwards;
+}
+
+.sm-component-out {
+  animation: moveOutFromRight-sm ease-in-out 0.4s forwards;
+}
+
+/*---------------------- Nav Links Styles ---------------------- */
+.link-container {
+  position: relative;
+  display: inline-block;
+}
+
+.underline {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #6FDCE3;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link-container:hover .underline {
+  width: 100%;
+  left: 0;
+}
+.link-container:hover .text {
+  color: #6FDCE3;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+.active .underline {
+  width: 100%;
+  left: 0;
+}
+
+.active .text {
+  color: #6FDCE3;
+}
+
+@media (min-width: 860px) {
+  .navlinks-display-burguer {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .navlinks-display-row {
+    display: none;
+  }
+}
+
+
+
+/* -------------------- NAV BAR Styles ------------------------ */
+
+/*--------------- HOME RECIPIES Styles ------------------------ */
+
+.home-recipies-container .description {
+  font-family: "opificio-rounded";
+  letter-spacing: .05rem;
+}
+
+.home-recipies-container:hover .description {
+  transition: all 0.2s ease-in-out;
+  color: var(--primary-color);
+}
+.home-recipies-container:hover .button {
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+
+  --tw-bg-opacity: 0.1;
+}
+
+/* ---------- FOOTER Styles --------------- */
+
+
+@media (min-width: 768px) {
+  .grid-cols-max {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+.footer-address-container {
+  background-color: #67B1EB;
+}
+
+.footer {
+  background-color: #134E7D;
+}
+
+.bottom-label{
+  background-color: #1B75BB;
+}
+
+
+.custom-button .effect-button {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover .effect-button {
+  height: 1000%;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-button p {
+  z-index: 2;
+  transition: all 0.2s ease-out;
+  
+}
+
+.custom-button .icon {
+  z-index: 2;
+  transition: all 0.2s ease-out;
+}
+
+.custom-button:hover .icon {
+  z-index: 2;
+  transform: translateX(5px);
+}
+
+.custom-button:hover p {
+  z-index: 2;
+  color: white;
+}
+
+
+.burguer div {
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burguer-active .first {
+  transform: translateX(-10px) rotate(0deg);
+  background: black;
+  opacity: 0;
+}
+
+.burguer-active .third {
+  transform: translateX(10px) rotate(0deg);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+
+}
