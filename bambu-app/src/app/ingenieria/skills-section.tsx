@@ -7,7 +7,7 @@ export const SkillsSection = ({
 }) => {
   const primaryColor = "#67B1EB";
   const secondaryColor = "#3871C1";
-  return <div className="relative flex flex-col lg:flex-row lg:flex-wrap justify-start items-center px-8 sm:px-16  py-4">
+  return <div className="relative flex flex-col lg:flex-row lg:flex-wrap justify-start items-end px-8 sm:px-16  py-4">
     {attributeItems.map(({ title, description, icon }, index) => {
       const position = index % 2 == 0;
       return (
@@ -19,7 +19,10 @@ export const SkillsSection = ({
         >
           <IconComponent
             iconName={icon}
-            className="order-2 w-8 h-auto min-w-6"
+            className="order-2 w-8 h-auto min-w-6 "
+            style={{
+              color: secondaryColor,
+            }}
             height={0}
             width={0}
           />

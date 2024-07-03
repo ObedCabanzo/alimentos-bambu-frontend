@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/IconComponent.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/IconComponent.tsx", "src/components/hooks/useFetchData.js", "src/app/productos/searchBar-section.tsx", "src/components/hooks/useProducts.ts"],
   "exclude": ["node_modules"]
 }

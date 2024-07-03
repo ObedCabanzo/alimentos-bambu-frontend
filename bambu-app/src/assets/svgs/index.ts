@@ -30,7 +30,13 @@ import { default as IconSensations } from "./icon_sensations.svg";
 import { default as IconBenefits } from "./icon_benefits.svg";
 import { default as IconGmail } from "./icon_gmail.svg";
 import { default as IconMail } from "./icon_mail.svg";
-
+import { default as IconSearch } from "./icon_search.svg";
+import { default as IconSugarFree } from "./icon_sugar_free.svg";
+import { default as IconVegan } from "./icon_vegan.svg";
+import { default as IconGluten } from "./icon_gluten.svg";
+import { default as IconFiber } from "./icon_fiber.svg";
+import { default as IconClose } from "./icon_close.svg";
+import { default as IconBital } from "./icon_bital.svg";
 // Mapa de iconos
 const iconsMap: {
   [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
@@ -66,6 +72,14 @@ const iconsMap: {
   icon_benefits: IconBenefits,
   icon_gmail: IconGmail,
   icon_mail: IconMail,
+  icon_search: IconSearch,
+  icon_sugar_free: IconSugarFree,
+  icon_vegan: IconVegan,
+  icon_gluten: IconGluten,
+  icon_fiber: IconFiber,
+  icon_close: IconClose,
+  icon_bital: IconBital,
+
 };
 
 // Componente para renderizar el icono

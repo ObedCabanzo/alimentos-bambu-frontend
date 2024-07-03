@@ -14,7 +14,7 @@ export const ContactSection = ({
   const primaryColor = "#67B1EB";
   const secondaryColor = "#3871C1";
   return (
-    <div className="flex w-full flex-row flex-wrap-reverse justify-end items-center px-16 pt-8 gap-8 z-5">
+    <div className="flex w-full flex-row flex-wrap-reverse justify-end items-center px-16 lg:px-0  pt-8 gap-8 z-5">
       <div className="w-full lg:w-2/5 h-64">
         <MapComponent />
       </div>

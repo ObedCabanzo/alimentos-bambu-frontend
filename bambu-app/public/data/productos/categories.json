@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "title": "Pasteleros",
+    "icon": "icon_cake"
+  },
+  {
+    "id": 1,
+    "title": "Crunch",
+    "icon": "icon_waffle"
+  },
+  {
+    "id": 2,
+    "title": "Bebidas",
+    "icon": "icon_drink"
+  },
+  {
+    "id": 3,
+
+    "title": "Bitäl (Veganos)",
+    "icon": "icon_calm"
+  }
+]

@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Opificio-neue";
-  src: url("../assets/fonts/Opificio_neue-regular.ttf") format("truetype");
+  src: url("../assets/fonts/OpificioNeue.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -60,36 +60,45 @@
   height: auto;
 }
 
+.bg-container::before {
+  content: '';  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(30, 36, 59, 0.5); /* Color #1E243B con 50% de opacidad */
+}
+
+.bg-container-color {
+  background-color: #9F2746; /* Color #1E243B con 50% de opacidad */
+}
+.bg-container-color::before {
+  background-color: rgba(30, 36, 59, 0); 
+}
+
+.bg-conocenos-section-1 {
+  background-image: url("../../public/images/image_conocenos_section.png");
+}
+
 
 /*-------------- HOME PAGE Styles --------------------*/
 
 .bg-home {
-  background-image: url("../assets/images/image_bck.png");
-}
-.bg-home::before {
-  content: '';  
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(30, 36, 59, 0.5); /* Color #1E243B con 50% de opacidad */
+  background-image: url("../../public/images/banner_home.png");
 }
 
 .bg-engineering {
-  background-image: url("../assets/images/image_bck_1.jpg");
-
+  background-image: url("../../public/images/banner_ingenieria.jpg");
 }
-.bg-engineering::before {
-  content: '';  
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-color: rgba(30, 36, 59, 0.5); /* Color #1E243B con 50% de opacidad */
+
+.bg-productos {
+  background-image: url("../../public/images/banner_productos.jpg");
+}
+
+.bg-conocenos {
+  background-image: url("../../public/images/banner_conocenos.jpg");
 }
 
 .home-title {

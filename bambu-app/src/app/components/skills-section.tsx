@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import "./styles.css";
-import CoffeeImage from "@/assets/images/image_coffee.png";
+import CoffeeImage from "../../../public/images/image_coffee.png";
 import IconComponent from "@/components/IconComponent";
 
 import { CustomButton } from "@/components/custom-button";

@@ -1,16 +1,25 @@
-
-import { BannerSection } from "./banner-section";
 import IconComponent from "@/components/IconComponent";
 import { SkillsSection } from "./skills-section";
 import { ContactSection } from "./contact-section";
+import { BannerComponent } from "@/components/banner-component";
 export default function EngineeringPage() {
   const primaryColor = "#67B1EB";
   const secondaryColor = "#3871C1";
   const data = {
     title: "Ingeniería Bambú",
     descriptionItems: [
-      "Creemos en una alimentación saludable y segura, nuestro compromiso es con el consumidor, sus necesidades y su bienestar",
-      "Fabricamos y comercializamos mezclas en polvo para facilitar la preparación de recetas únicas",
+      {
+        description:
+          "Creemos en una alimentación saludable y segura, nuestro compromiso es con el consumidor, sus necesidades y su bienestar",
+        coloredItems: [3, 4, 5, 6, 8,13,14,15,16,17],
+        itemColor: primaryColor,
+      },
+      {
+        description:
+          "Fabricamos y comercializamos mezclas en polvo para facilitar la preparación de recetas únicas",
+        coloredItems: [7,12],
+        itemColor: primaryColor,
+      },
     ],
     sectionsData: [
       {
@@ -167,9 +176,11 @@ export default function EngineeringPage() {
   };
   return (
     <div>
-      <BannerSection
+      <BannerComponent
         title={data.title}
         descriptionItems={data.descriptionItems}
+        color="#67B1EB"
+        children={null}
       />
       <div className="flex flex-col pb-16 lg:py-16 gap-16 w-full lg:pr-32 items-between ">
         {data.sectionsData.map(({ id, title, descriptionItems }, _) => {
@@ -223,9 +234,7 @@ export default function EngineeringPage() {
               {id === 1 && (
                 <SkillsSection attributeItems={data.atributtesItems} />
               )}
-              {id === 2 && (
-                <ContactSection contact={data.contact}/>
-              )}
+              {id === 2 && <ContactSection contact={data.contact} />}
             </div>
           );
         })}

@@ -3,14 +3,13 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { useState } from "react";
 import L from "leaflet";
-import IconComponent from "./IconComponent";
 import { CustomButton } from "./custom-button";
 const MapComponent = () => {
   const [geoData, setGeoData] = useState({
     lat: 4.639231543829626,
     lng: -74.1632130466491,
   });
-  const icon = L.icon({ iconUrl: "../assets/images/image_location.png" });
+  const icon = L.icon({iconUrl: "./image_location.png"});
   return (
    
       <MapContainer
