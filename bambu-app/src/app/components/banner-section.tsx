@@ -1,4 +1,4 @@
-import { HomeRecipiesButton } from "@/components/home-recepies-component";
+import { HomeRecipiesButton } from "@/components/ComponentHomeBanner/home-recepies-component";
 import { BannerComponent } from "@/components/banner-component";
 
 export default function BannerSection() {

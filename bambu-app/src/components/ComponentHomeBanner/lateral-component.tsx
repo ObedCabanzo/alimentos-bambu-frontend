@@ -1,9 +1,9 @@
-"use client"
-import IconComponent from "./IconComponent";
-import { useMediaQuery } from "./hooks/useMediaQuery";
+"use client";
+import IconComponent from "@/components/IconComponent";
+import { useMediaQuery } from "@/components/hooks/useMediaQuery";
 import { useScrollTop } from "@/components/hooks/useScrollTop";
+import "@/components/component-styles.css";
 
-import "./component-styles.css";
 export const LateralComponent = ({ color }: { color?: string }) => {
   const isTop = useScrollTop();
   const isSmallScreen = useMediaQuery("(max-width: 1024px)");
@@ -43,7 +43,9 @@ export const LateralComponent = ({ color }: { color?: string }) => {
         }}
       ></span>
       <p
-        className={" transform rotate-180 whitespace-nowrap cursor-vertical-text text-xs md:text-sm "}
+        className={
+          " transform rotate-180 whitespace-nowrap cursor-vertical-text text-xs md:text-sm "
+        }
         style={{
           color: color ? color : "white",
         }}

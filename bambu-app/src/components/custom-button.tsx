@@ -13,19 +13,24 @@ export const CustomButton = ({
   textColor,
   textColorHover,
   className,
+  onClick,
 }: {
   text: string;
-  href: string;
+  href?: string;
   bg: string;
   bg_hover: string;
   textColor: string;
   textColorHover: string;
   blank?: boolean;
   className?: string;
+  onClick?: (e:any) => void;
 }) => {
   const router = useRouter();
   const handleClick = () => {
-    blank ? window.open(href, "_blank") : router.push(href);
+    if (href === undefined) return;
+    else {
+      blank ? window.open(href, "_blank") : router.push(href);
+    }
   };
   const [colorItems, setColorItems] = useState("");
 
@@ -39,7 +44,7 @@ export const CustomButton = ({
   return (
     <button
       className={classFormat}
-      onClick={handleClick}
+      onClick={onClick ? onClick : handleClick}
       style={{
         backgroundColor: bg,
         fontFamily: "Opificio-rounded-bold",

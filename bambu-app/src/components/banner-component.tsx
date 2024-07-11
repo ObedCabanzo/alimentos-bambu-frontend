@@ -1,6 +1,6 @@
 import { HighlightText } from "./highlight-text-component";
-import { LateralComponent } from "./lateral-component";
-import { SocialMediaComponent } from "./social-media-component";
+import { LateralComponent } from "@/components/ComponentHomeBanner/lateral-component";
+import { SocialMediaComponent } from "@/components/ComponentHomeBanner/social-media-component";
 export const BannerComponent = ({
   children,
   className,

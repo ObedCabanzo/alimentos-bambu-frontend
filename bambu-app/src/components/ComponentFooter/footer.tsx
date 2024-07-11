@@ -1,5 +1,5 @@
 import { FooterLogo, FoooterLinks, FooterAddress } from "./footer-components";
-import "./component-styles.css"
+import "@/components/component-styles.css"
 
 export const Footer = () => {
   return (

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useProductContext } from "@/components/context/products-context";
 import { Product } from "@/components/model/types";
+import ProductsData from "@/config/data_products"
 
 export const useProducts = () => {
   const { state, dispatch } = useProductContext();
@@ -9,9 +10,8 @@ export const useProducts = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      let products = await fetch("/data/productos/products.json").then((res) =>
-        res.json()
-      );
+      
+      let products = ProductsData as Product[];
       // Filtrar por categoría
       if (state.searchQuery) {
         products = products.filter((product: Product) =>

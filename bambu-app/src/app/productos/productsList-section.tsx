@@ -1,3 +1,4 @@
+"use client"
 import { useRef } from "react";
 import { ProductCard } from "./product-card";
 import { Product } from "../../components/model/types";

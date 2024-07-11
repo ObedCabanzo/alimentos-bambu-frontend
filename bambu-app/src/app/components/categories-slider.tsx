@@ -6,9 +6,11 @@ import Icon from "@/components/IconComponent";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Link from "next/link";
 
 export const CategoriesSlider = ({
   categories,
+  buttonColor
 }: {
   categories: {
     id: number;
@@ -16,6 +18,7 @@ export const CategoriesSlider = ({
     icon: string;
     description: string;
   }[];
+  buttonColor: string
 }) => {
   const [activeSlide, setActiveSlide] = useState(1);
 
@@ -27,19 +30,16 @@ export const CategoriesSlider = ({
     speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: (
-      <ArrowComponent
-        className=""
-        icon={"icon_go_next"}
-      />
-    ),
+    nextArrow: <ArrowComponent className="" icon={"icon_go_next"} color={buttonColor}  />,
     prevArrow: (
       <ArrowComponent
         className="right-0"
         iconClassName=" rotate-180 "
         icon={"icon_go_next"}
+        color={buttonColor}
       />
     ),
+
     beforeChange: (current: number, next: number) => {
       if (next === categories.length - 1) {
         setActiveSlide(0);
@@ -56,13 +56,14 @@ export const CategoriesSlider = ({
           infinite: true,
           dots: true,
           beforeChange: (current: number, next: number) => {
-            
-            setActiveSlide(next );
+            setActiveSlide(next);
           },
         },
       },
     ],
   };
+
+  
 
   return (
     <>
@@ -74,9 +75,10 @@ export const CategoriesSlider = ({
           <Slider {...settings}>
             {categories.map((category, index) => {
               return (
-                <div
+                <Link
                   key={index}
                   className="flex flex-col gap-2 rounded-3xl sm:px-2"
+                  href={"/productos"}
                 >
                   <div
                     key={index}
@@ -84,10 +86,13 @@ export const CategoriesSlider = ({
                     style={{
                       transition: "opacity 0.4s ease-in-out",
                       opacity: activeSlide === index ? 1 : 0.5,
+                      
                     }}
                   >
-                    
-                    <Icon iconName={category.icon} className="h-8 w-8 sm:h-8 text-black"/>
+                    <Icon
+                      iconName={category.icon}
+                      className="h-8 w-8 sm:h-8 text-black"
+                    />
                     <p className="text-center font-bold text-sm md:text-base">
                       {category.title}
                     </p>
@@ -95,7 +100,7 @@ export const CategoriesSlider = ({
                       {category.description}
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </Slider>

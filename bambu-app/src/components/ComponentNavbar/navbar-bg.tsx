@@ -1,10 +1,9 @@
 "use client";
-import { useScrollTop } from "./hooks/useScrollTop";
+import { useScrollTop } from "@/components/hooks/useScrollTop";
 import { usePathname } from "next/navigation";
 
 export const NavBarBackground = () => {
   const isTop = useScrollTop();
-  const pathname = usePathname();
   const getBgColor = (): { top: string; content: string } => {
     switch (pathname) {
       case "/contactanos":
@@ -17,6 +16,7 @@ export const NavBarBackground = () => {
         return { top: "transparent", content: "rgba(19, 78, 125, 0.8)" };
     }
   };
+  const pathname = usePathname();
   return (
     <div
       className="absolute h-full w-full -z-10 left-0"

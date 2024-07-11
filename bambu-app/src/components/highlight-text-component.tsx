@@ -2,15 +2,17 @@ export const HighlightText = ({
   text,
   indices,
   color,
+  bold
 }: {
   text: string;
   indices: number[];
   color: string;
+  bold?: boolean;
 }) => {
   const words = text.split(" ");
 
   return (
-    <p>
+    <p className={bold ? "font-bold" : ""}>
       {words.map((word, index) => {
         const isHighlighted = indices.includes(index);
         return (
@@ -18,7 +20,7 @@ export const HighlightText = ({
             key={index}
             style={{
               color: isHighlighted ? color : "inherit",
-              fontWeight: isHighlighted ? "bold" : "normal",
+              fontWeight: isHighlighted || bold ? "bold" : "normal",
             }}
           >
             {word}{" "}

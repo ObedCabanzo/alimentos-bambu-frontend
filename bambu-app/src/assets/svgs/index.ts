@@ -37,6 +37,7 @@ import { default as IconGluten } from "./icon_gluten.svg";
 import { default as IconFiber } from "./icon_fiber.svg";
 import { default as IconClose } from "./icon_close.svg";
 import { default as IconBital } from "./icon_bital.svg";
+import { default as IconLocation1 } from "./icon_location_1.svg";
 // Mapa de iconos
 const iconsMap: {
   [key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
@@ -79,7 +80,8 @@ const iconsMap: {
   icon_fiber: IconFiber,
   icon_close: IconClose,
   icon_bital: IconBital,
-
+  icon_location_1: IconLocation1,
+  
 };
 
 // Componente para renderizar el icono

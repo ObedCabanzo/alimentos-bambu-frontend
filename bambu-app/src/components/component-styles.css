@@ -232,5 +232,14 @@
   transform: translateX(10px) rotate(0deg);
   transition: all 0.3s ease-in-out;
   opacity: 0;
+}
 
+.menu-page--default{
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.menu-page--active{
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
 }

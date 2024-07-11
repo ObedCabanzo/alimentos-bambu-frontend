@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation";
-import IconComponent from "./IconComponent";
-import "./component-styles.css";  
+import IconComponent from "@/components/IconComponent";
+import "@/components/component-styles.css";  
 
 
 export const HomeRecipiesButton = ({ href }: { href: string }) => {

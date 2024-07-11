@@ -1,6 +1,6 @@
 "use client"
-import "./component-styles.css";
-import IconComponent from "./IconComponent";
+import "@/components/component-styles.css";
+import IconComponent from "@/components/IconComponent";
 
 export const SocialMediaComponent = ({
   className,

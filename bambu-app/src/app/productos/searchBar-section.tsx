@@ -1,6 +1,5 @@
 import { useProductContext } from "@/components/context/products-context";
 import IconComponent from "@/components/IconComponent";
-import { useState } from "react";
 
 export const SearchBar = () => {
   const { state, dispatch } = useProductContext();
@@ -20,6 +19,7 @@ export const SearchBar = () => {
   };
 
   return (
+    
     <div className="flex items-center justify-between w-full border-gray-300 border-solid border-2 rounded-3xl px-4 py-2 gap-4">
       <div className="flex h-full w-full justify-start gap-4">
         <IconComponent

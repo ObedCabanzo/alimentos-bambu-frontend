@@ -3,6 +3,10 @@ import { CustomButton } from "@/components/custom-button";
 import IconComponent from "@/components/IconComponent";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Bitäl",
+};
+
 export default function BrandPage() {
   const data = {
     description:
@@ -95,9 +99,11 @@ export default function BrandPage() {
         <div className="hidden sm:flex relative w-1/2" >
           <Image
             src={"/images/".concat(data.section_products.urlImage)}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="500px"
             alt="banner_image"
+            priority
             
           />
         </div>

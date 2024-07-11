@@ -19,8 +19,10 @@ export const MemberComponent = ({
         <div className="relative w-32 h-32 rounded-full overflow-hidden z-10">
           <Image
             src={`/images/${image}`}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            sizes="300px"
+            priority={true}
             alt={name}
             className="rounded-full"
           />

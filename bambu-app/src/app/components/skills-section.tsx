@@ -7,62 +7,43 @@ import IconComponent from "@/components/IconComponent";
 import { CustomButton } from "@/components/custom-button";
 import { useRouter } from "next/navigation";
 
-export default function SkillsSection() {
+export default function SkillsSection({
+  info,
+}: {
+  info: {
+    title: string;
+    description: string;
+    buttonInfo: {
+      text: string;
+      background_color: string;
+      href: string;
+      text_color: string;
+      background_color_hover: string;
+      text_color_hover: string;
+    };
+    skills: {
+      id: number;
+      title: {
+        text: string;
+        className: string;
+      };
+      subtitle: {
+        text: string;
+        className: string;
+      };
+      icon: string;
+      self: string;
+    }[];
+  };
+}) {
   const router = useRouter();
   const iconClassname =
     "icon sm:h-16 w-12 h-12 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24";
-  const data = {
-    title: "¡CREA TUS PROPIOS PRODUCTOS!",
-    description:
-      "Con nuestra colaboración, podemos diseñar soluciones alimenticias que se adapten perfectamente a tus necesidades.",
-    buttonDescription: "¡Trabajemos juntos!",
-    skills: [
-      {
-        id: 0,
-        title: {
-          text: "Productos totalmente",
-          className: "text-black",
-        },
-        subtitle: {
-          text: "personalizados",
-          className: "text-blue-400 font-bold",
-        },
-        icon: "icon_pen",
-        self: "self-end",
-      },
-      {
-        id: 1,
-        title: {
-          text: "Mejora",
-          className: "text-blue-400 font-bold",
-        },
-        subtitle: {
-          text: "tus productos",
-          className: "text-black",
-        },
-        icon: "icon_chart",
-        self: "self-start",
-      },
-      {
-        id: 2,
-        title: {
-          text: "Diseñamos productos",
-          className: "text-black",
-        },
-        subtitle: {
-          text: "innovadores",
-          className: "text-blue-400 font-bold ", //rgb(44, 169, 188)
-        },
-        icon: "icon_idea",
-        self: "self-end",
-      },
-    ],
-  };
 
   return (
     <section className="flex flex-col gap-16 py-16 w-full">
       <div className="relative flex justify-center items-end min-h-64 sm:min-h-72 md:min-h-80 lg:min-h-96 px-8 sm:gap-8 md:gap-16 lg:gap-32  ">
-        {data.skills.map((skill) => {
+        {info.skills.map((skill) => {
           return (
             <div
               key={skill.id}
@@ -98,15 +79,17 @@ export default function SkillsSection() {
       <div className="flex gap-4 justify-center items-center flex-col px-8 sm:px-16 lg:px-64 ">
         <div>
           <h1 className="text-xl sm:2xl md:4xl font-bold text-center">
-            {data.title}
+            {info.title}
           </h1>
-          <p className="text-center text-xs sm:text-sm ">{data.description}</p>
+          <p className="text-center text-xs sm:text-sm ">{info.description}</p>
         </div>
         <CustomButton
-          text={data.buttonDescription}
-          href="/contactanos"
-          bg="#1B75BB"
-          bg_hover="#134E7D"
+          text={info.buttonInfo.text}
+          href={info.buttonInfo.href}
+          bg={info.buttonInfo.background_color}
+          bg_hover={info.buttonInfo.background_color_hover}
+          textColor={info.buttonInfo.text_color}
+          textColorHover={info.buttonInfo.text_color_hover}
           blank={false}
         />
       </div>

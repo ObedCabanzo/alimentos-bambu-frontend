@@ -1,44 +1,23 @@
 import Link from "next/link";
-import IconComponent from "./IconComponent";
-import "./component-styles.css";
+import IconComponent from "@/components/IconComponent";
+import "@/components/component-styles.css";
+import { BambuSocialMedia } from "@/config/data_social_media";
 
 export const FooterLogo = () => {
-  const iconClassName = "icon h-5 w-5 sm:h-6 sm:w-6";
-  const socialMedia = [
-    {
-      id: 0,
-      href: "https://www.facebook.com/alimentosbambu",
-      icon: "icon_rounded_facebook" ,
-    },
-    {
-      id: 1,
-      href: "https://www.instagram.com/alimentosbambu",
-      icon: "icon_rounded_instagram",
-    },
-    {
-      id: 2,
-      href: "undefined",
-      icon: "icon_rounded_mail",
-    },
-    {
-      id: 3,
-      href: "undefined",
-      icon: "icon_rounded_whatsapp",
-    },
-  ];
-
   return (
     <div className="relative flex flex-col justify-center items-center gap-2 cursor-pointer">
       <IconComponent iconName="icon_bambu_white" className="h-full w-32 sm:w-40" />
       <div className="flex gap-2">
-        {socialMedia.map(({ id, href, icon }) => {
+        {BambuSocialMedia.map(({ id, href, icon }) => {
           return (
-            <div
+            <Link
               key={id}
               className="bg-white rounded-full p-2 sm:p-3 cursor-pointer"
+              target={href.startsWith("/") ? "" : "_blank"}
+              href={href}
             >
-             <IconComponent iconName={icon} className={iconClassName}/>
-            </div>
+             <IconComponent iconName={icon} className={"icon h-5 w-5 sm:h-6 sm:w-6 text-[#134E7D]"}/>
+            </Link>
           );
         })}
       </div>
@@ -51,17 +30,17 @@ export const FoooterLinks = () => {
     {
       id: 0,
       name: "Quienes somos",
-      href: "/about",
+      href: "/conocenos",
     },
     {
       id: 1,
       name: "Nuestros productos",
-      href: "/products",
+      href: "/productos",
     },
     {
       id: 2,
       name: "Contáctanos",
-      href: "/contact",
+      href: "/contactanos",
     },
     {
       id: 3,
@@ -71,12 +50,12 @@ export const FoooterLinks = () => {
     {
       id: 4,
       name: "Nuestra Marca - BITAL",
-      href: "/brand",
+      href: "/bital",
     },
     {
       id: 5,
       name: "Ingeniería Bambú",
-      href: "/engineering",
+      href: "/ingenieria",
     },
   ];
   return (
@@ -99,7 +78,7 @@ export const FooterAddress = () => {
       id: 0,
       name: "Cra 34Bis sur #87F - 23",
       icon: "icon_location",
-      link: "",
+      link: "https://www.google.com/maps/place/Alimentos+Bamb%C3%BA/@4.6389749,-74.1658094,17z/data=!4m16!1m9!3m8!1s0x8e3f9c31d92766ff:0x9372def3dde031e6!2sAlimentos+Bamb%C3%BA!8m2!3d4.6389749!4d-74.1632345!9m1!1b1!16s%2Fg%2F11f__h5cxg!3m5!1s0x8e3f9c31d92766ff:0x9372def3dde031e6!8m2!3d4.6389749!4d-74.1632345!16s%2Fg%2F11f__h5cxg?entry=ttu",
     },
     {
       id: 1,
@@ -111,7 +90,7 @@ export const FooterAddress = () => {
       id: 2,
       name: "+57 (313) 404 5758",
       icon: "icon_whatsapp",
-      link: "",
+      link: "https://wa.me/573134045758",
     },
   ];
   return (
@@ -124,6 +103,8 @@ export const FooterAddress = () => {
               key={id}
               className="flex gap-2 justify-center cursor-pointer text-center text-sm"
               href={link}
+              
+              target="_blank"
             >
               {name}
               <IconComponent iconName={icon} className={className} />

@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 const ProductContext = createContext({} as any);
 
 const initialState = {
-  selectedCategory: 2,
+  selectedCategory: 1,
   searchQuery: '',
   sortMode: 'default', // puede ser 'default', 'price-asc', 'price-desc', etc.
   products: [],
