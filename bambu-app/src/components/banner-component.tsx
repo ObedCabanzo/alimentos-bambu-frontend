@@ -14,7 +14,7 @@ export const BannerComponent = ({
   className?: string;
   lateralComponentColor?: string;
   socialMediaColor?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title?: string;
   color?: string;
   bgColor?: string;

@@ -6,7 +6,12 @@ import { BambuSocialMedia } from "@/config/data_social_media";
 export const FooterLogo = () => {
   return (
     <div className="relative flex flex-col justify-center items-center gap-2 cursor-pointer">
-      <IconComponent iconName="icon_bambu_white" className="h-full w-32 sm:w-40" />
+      <Link href={"/"}>
+        <IconComponent
+          iconName="icon_bambu_white"
+          className="h-full w-32 sm:w-40"
+        />
+      </Link>
       <div className="flex gap-2">
         {BambuSocialMedia.map(({ id, href, icon }) => {
           return (
@@ -16,7 +21,10 @@ export const FooterLogo = () => {
               target={href.startsWith("/") ? "" : "_blank"}
               href={href}
             >
-             <IconComponent iconName={icon} className={"icon h-5 w-5 sm:h-6 sm:w-6 text-[#134E7D]"}/>
+              <IconComponent
+                iconName={icon}
+                className={"icon h-5 w-5 sm:h-6 sm:w-6 text-[#134E7D]"}
+              />
             </Link>
           );
         })}
@@ -101,10 +109,12 @@ export const FooterAddress = () => {
           return (
             <Link
               key={id}
-              className="flex gap-2 justify-center cursor-pointer text-center text-sm"
-              href={link}
-              
-              target="_blank"
+              className={"flex gap-2 justify-center  text-center text-sm ".concat(
+                link ? "" : "cursor-default"
+              )}
+              href={link ? link : ""}
+              target={link ? "_blank" : ""}
+              unselectable="off"
             >
               {name}
               <IconComponent iconName={icon} className={className} />

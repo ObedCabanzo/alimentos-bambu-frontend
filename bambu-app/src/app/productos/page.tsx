@@ -1,9 +1,11 @@
 import { BannerComponent } from "@/components/banner-component";
 import ProductsInfo from "@/config/dataPage_productos";
 import { ContentSection } from "./content-section";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title : "Productos",
+  description: "Descubre nuestra variedad de productos."
 }
 
 export default function ProductsPage() {
@@ -14,7 +16,6 @@ export default function ProductsPage() {
         descriptionItems={ProductsInfo.banner.descriptionItems}
         title={ProductsInfo.banner.title}
         color={ProductsInfo.banner.itemsColor}
-        children={null}
       />
       <ContentSection/>
     </div>

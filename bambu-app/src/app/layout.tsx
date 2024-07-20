@@ -15,9 +15,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="shortcut icon" href="/favicon.svg" />
-      </head>
       <body className="body ">
         <NavBar />
         {children}

@@ -4,6 +4,13 @@ import { CustomButton } from "@/components/custom-button";
 import { MemberComponent } from "./member-card";
 import ConocenosInfo from "@/config/dataPage_conocenos";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Conocenos",
+  description: "Explora nuestra identidad, comprende nuestra misión, visión y principios.",
+};
+
 
 export default async function AboutPage() {
 
@@ -12,7 +19,6 @@ export default async function AboutPage() {
     <div>
       <BannerComponent
         className="bg-conocenos"
-        children={null}
         title={ConocenosInfo.banner.title}
         descriptionItems={ConocenosInfo.banner.descriptionItems}
         color={ConocenosInfo.banner.color}

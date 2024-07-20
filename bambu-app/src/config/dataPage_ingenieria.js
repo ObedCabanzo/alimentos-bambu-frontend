@@ -4,6 +4,8 @@ const IngenieriaInfo = {
   banner: {
     title: "Ingeniería Bambú",
     color: primaryColor,
+    primaryColor: primaryColor,
+    secondaryColor: secondaryColor,
     descriptionItems: [
       {
         description:

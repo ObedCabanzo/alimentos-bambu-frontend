@@ -2,8 +2,11 @@
 import { SocialMediaComponent } from "./media-section";
 import { FormSection } from "./form-section";
 import { MapComponent } from "@/components/ComponentMap/index";
-export const metadata = {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Contactanos",
+  description: "¿Tienes alguna duda o sugerencia? Contáctanos y te responderemos lo más pronto posible.",
 };
 
 

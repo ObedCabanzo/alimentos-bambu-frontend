@@ -6,9 +6,11 @@ import PauzeInfo from "@/config/dataPage_pauze";
 import { PauzeSocialMedia } from "@/config/data_social_media";
 import { HighlightText } from "@/components/highlight-text-component";
 import { LinkComponent } from "./component-link";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Pauzë",
+  description: "¿Necesitas un descanso? ¡Pauzë es la solución!",
 };
 
 export default function PauzePage() {

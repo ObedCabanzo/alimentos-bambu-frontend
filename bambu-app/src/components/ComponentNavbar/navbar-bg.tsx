@@ -11,7 +11,7 @@ export const NavBarBackground = () => {
       case "/bital":
         return { top: "transparent", content: "rgba(159, 39, 70, 0.8)" };
       case "/pauze":
-        return { top: "transparent", content: "rgba(255, 255, 255, 0.8)" };
+        return { top: "rgba(255, 255, 255, 0.8)", content: "rgba(255, 255, 255, 0.8)" };
       default:
         return { top: "transparent", content: "rgba(19, 78, 125, 0.8)" };
     }

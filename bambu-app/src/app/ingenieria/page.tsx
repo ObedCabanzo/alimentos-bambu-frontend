@@ -3,9 +3,11 @@ import { SkillsSection } from "./skills-section";
 import { ContactSection } from "./contact-section";
 import { BannerComponent } from "@/components/banner-component";
 import IngenieriaInfo from "@/config/dataPage_ingenieria";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ingeniería",
+  description: "Quieres crear tus propios productos, te ayudamos a hacerlo realidad.",
 };
 
 export default function EngineeringPage() {
@@ -18,13 +20,12 @@ export default function EngineeringPage() {
         title={IngenieriaInfo.banner.title}
         descriptionItems={IngenieriaInfo.banner.descriptionItems}
         color={IngenieriaInfo.banner.color}
-        children={null}
       />
       <div className="flex flex-col pb-16 lg:py-16 gap-16 w-full lg:pr-32 items-between ">
         {IngenieriaInfo.sectionsData.map(
-          ({ id, title, descriptionItems }, _) => {
+          ({ id, title, descriptionItems }, index) => {
             return (
-              <div className="flex w-full flex-col items-center gap-4 ">
+              <div className="flex w-full flex-col items-center gap-4 " key={index}>
                 <div className="flex gap-16 w-full  items-center flex-col lg:flex-row lg:items-start">
                   <div className="flex gap-4 w-full lg:w-2/5 bg-[#67B1EB] items-center py-8 h-fit text-start">
                     <span className="w-1/6 md:w-32 h-1 rounded-3xl bg-white"></span>

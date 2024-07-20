@@ -1,4 +1,4 @@
-export default BitalInfo = {
+const BitalInfo = {
   description:
     "En cada producto Bitäl, encontrarás el cuidado y la dedicación que ponemos en ofrecerte alternativas sabrosas que respetan tus elecciones de estilo de vida. ",
   features: [
@@ -27,3 +27,5 @@ export default BitalInfo = {
     urlImage: "image_conocenos_section.png",
   },
 };
+
+export default BitalInfo;
