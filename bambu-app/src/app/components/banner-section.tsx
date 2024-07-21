@@ -45,7 +45,7 @@ export default function BannerSection() {
       </div>
       <div className="h-8 sm:h-20"></div>
 
-      <HomeRecipiesButton href="/products" />
+      <HomeRecipiesButton href="/productos" />
 
       
     </BannerComponent>
