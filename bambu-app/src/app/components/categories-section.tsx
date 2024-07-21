@@ -65,7 +65,7 @@ export default function CategoriesHomeSection({
             />
           </div>
         </div>
-        <CategoriesSlider categories={CategoriesData} buttonColor={background_color}/>
+        <CategoriesSlider categories={Object.entries(CategoriesData)} buttonColor={background_color}/>
       </div>
     </section>
   );

@@ -10,15 +10,17 @@ import Link from "next/link";
 
 export const CategoriesSlider = ({
   categories,
-  buttonColor
+  buttonColor,
 }: {
-  categories: {
-    id: number;
-    title: string;
-    icon: string;
-    description: string;
-  }[];
-  buttonColor: string
+  categories: [
+    key: string,
+    value: {
+      title: string;
+      icon: string;
+      description: string;
+    }
+  ][];
+  buttonColor: string;
 }) => {
   const [activeSlide, setActiveSlide] = useState(1);
 
@@ -30,7 +32,9 @@ export const CategoriesSlider = ({
     speed: 200,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <ArrowComponent className="" icon={"icon_go_next"} color={buttonColor}  />,
+    nextArrow: (
+      <ArrowComponent className="" icon={"icon_go_next"} color={buttonColor} />
+    ),
     prevArrow: (
       <ArrowComponent
         className="right-0"
@@ -63,8 +67,6 @@ export const CategoriesSlider = ({
     ],
   };
 
-  
-
   return (
     <>
       <div className="min-h-fit relative flex gap-8 justify-center items-center w-full h-full  overflow-hidden">
@@ -73,12 +75,12 @@ export const CategoriesSlider = ({
           <div className="absolute w-2/12 sm:w-1/5 slider-bt-next-right h-full z-10 -right-1 hidden sm:block" />
 
           <Slider {...settings}>
-            {categories.map((category, index) => {
+            {categories.map(([key, category], index) => {
               return (
                 <Link
                   key={index}
                   className="flex flex-col gap-2 rounded-3xl sm:px-2"
-                  href={"/productos"}
+                  href={"/productos/".concat(key)}
                 >
                   <div
                     key={index}
@@ -86,7 +88,6 @@ export const CategoriesSlider = ({
                     style={{
                       transition: "opacity 0.4s ease-in-out",
                       opacity: activeSlide === index ? 1 : 0.5,
-                      
                     }}
                   >
                     <Icon

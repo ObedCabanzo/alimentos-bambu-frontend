@@ -6,7 +6,6 @@ interface PaginationProps {
   setCurrentPage: (page: number) => void;
   totalProducts: number;
   productsPerPage: number;
-  scrollTargetRef: React.RefObject<HTMLDivElement>;
 }
 
 export const Pagination = ({
@@ -14,23 +13,16 @@ export const Pagination = ({
   setCurrentPage,
   totalProducts,
   productsPerPage,
-  scrollTargetRef,
 }: PaginationProps) => {
   const [showPageList, setShowPageList] = useState(false);
 
-  const scrollToTop = () => {
-    if (scrollTargetRef.current) {
-      scrollTargetRef.current.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+
 
   const handleNextPage = () => {
     if (currentPage < Math.ceil(totalProducts / productsPerPage)) {
       setCurrentPage(currentPage + 1);
       setShowPageList(false);
-      scrollToTop();
+
     }
   };
 
@@ -39,14 +31,13 @@ export const Pagination = ({
       setCurrentPage(currentPage - 1);
       setShowPageList(false);
 
-      scrollToTop();
     }
   };
 
   const handlePageClick = (page: number) => {
     setCurrentPage(page);
     setShowPageList(false);
-    scrollToTop();
+
   };
 
   const handleShowPageList = () => {

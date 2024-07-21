@@ -1,3 +1,10 @@
+const categories = {
+  bebidas: "bebidas",
+  pasteleros: "pasteleros",
+  bital: "veganos",
+  crunch: "brunch",
+}
+
 const ProductsData = [
   {
     
@@ -7,7 +14,7 @@ const ProductsData = [
     description:
       "Su preparación es muy fácil, se puede hacer con cualquier tipo de leche, tan sólo requiere un licuado corto para obtener una bebida típica, deliciosa y lo más importante, saludable",
     imageName: "image_product_1.png",
-    categories: [1, 3],
+    categories: [categories.bebidas, categories.bital],
     isBrand: true,
     benefits: [
       {
@@ -50,7 +57,7 @@ const ProductsData = [
     description:
       "Excelente acompañamiento para cualquier comida, solo requiere hielo, agua y un poco de zumo de limón si lo desea, para disfrutar una bebida refrescante",
     imageName: "image_product_2.png",
-    categories: [1],
+    categories: [categories.bebidas],
     isBrand: false,
     benefits: [
       {

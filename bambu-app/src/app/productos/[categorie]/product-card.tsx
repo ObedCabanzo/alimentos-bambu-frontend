@@ -52,7 +52,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
           </div>
         </div>
         <div className="rounded-3xl shadow-2xl h-fit p-4 sm:p-8 mt-8">
-          <h1 className="text-center sm:text-start text-base font-bold text-[#3971C1]">
+          <h1 className="text-center sm:text-start text-sm sm:text-base font-bold text-[#3971C1]">
             Presentaciones
           </h1>
           <div className="flex justify-between text-xs sm:text-sm text-center self-center mt-4 gap-4 sm:gap-8">

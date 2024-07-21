@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { useProductContext } from "@/components/context/products-context";
 import { Product } from "@/components/model/types";
 import ProductsData from "@/config/data_products"
+import { usePathname } from "next/navigation";
+
 
 export const useProducts = () => {
   const { state, dispatch } = useProductContext();
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 5;
+  const pathname = usePathname();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,12 +20,11 @@ export const useProducts = () => {
         products = products.filter((product: Product) =>
           product.title.toLowerCase().includes(state.searchQuery.toLowerCase())
         );
-        // Elegir la categoria del producto como la seleccionada
       }
       else if (state.selectedCategory !== null) {
         setCurrentPage(1);
         products = products.filter((product: Product) =>
-          product.categories.includes(state.selectedCategory)
+          product.categories.includes(pathname.split("/").pop()!)
         );
       }
 
@@ -34,7 +36,7 @@ export const useProducts = () => {
     };
 
     fetchProducts();
-  }, [state.selectedCategory, state.searchQuery, state.sortMode, dispatch]);
+  }, [state.selectedCategory, state.searchQuery, state.sortMode, dispatch, pathname]);
 
   const paginatedProducts = state.products.slice(
     (currentPage - 1) * productsPerPage,

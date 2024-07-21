@@ -6,13 +6,13 @@ export const CategoriesList = () => {
 
   return (
     <>
-      {CategoriesData.map((category, index) => (
+      {Object.entries(CategoriesData).map(([key, value], index) => (
         <CategorieButton
           key={index}
-          id={category.id}
-          title={category.title}
+          id = {key}
+          title={value.title}
           titleColor="#496623"
-          icon={category.icon}
+          icon={value.icon}
           iconColor="#496623"
         />
       ))}

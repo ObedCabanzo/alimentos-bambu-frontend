@@ -3,7 +3,7 @@ export type Product = {
   subtitle: string;
   description: string;
   imageName: string;
-  categories: number[];
+  categories: string[];
   isBrand: boolean;
   benefits: {
     title: string;

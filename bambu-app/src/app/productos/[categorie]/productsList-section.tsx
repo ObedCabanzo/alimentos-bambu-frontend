@@ -1,7 +1,7 @@
 "use client"
 import { useRef } from "react";
 import { ProductCard } from "./product-card";
-import { Product } from "../../components/model/types";
+import { Product } from "@/components/model/types";
 import { useProducts } from "@/components/hooks/useProducts";
 import { Pagination } from "./pagination";
 
@@ -14,7 +14,6 @@ export const ProductsList = () => {
     productsPerPage,
   } = useProducts();
 
-  const categoriesRef = useRef<HTMLDivElement>(null);
 
   const formatTitleProducts = () => {
     return totalProducts === 1
@@ -30,13 +29,12 @@ export const ProductsList = () => {
         </h1>
         <span className="w-full h-1 bg-[#496623] rounded-3xl block mt-2 opacity-20" />
       </div>
-      <div ref={categoriesRef}>
+      <div>
         <Pagination
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
           totalProducts={totalProducts}
           productsPerPage={productsPerPage}
-          scrollTargetRef={categoriesRef}
         />
         <div className="flex flex-col py-4 gap-8 items-center">
           {products.map((product: Product, index: number) => (
@@ -54,7 +52,6 @@ export const ProductsList = () => {
             setCurrentPage={setCurrentPage}
             totalProducts={totalProducts}
             productsPerPage={productsPerPage}
-            scrollTargetRef={categoriesRef}
           />
         )}
       </div>
