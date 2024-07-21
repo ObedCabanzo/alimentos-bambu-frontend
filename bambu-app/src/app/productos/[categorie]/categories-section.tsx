@@ -13,7 +13,7 @@ export const CategoriesSection = () => {
   }, [pathname])
 
   return (
-    <div className="w-screen sticky top-20 md:top-24 bg-white lg:bg-transparent flex flex-col sm:flex-row lg:w-fit justify-between items-center  lg:flex-col lg:items-start px-4 sm:px-8 py-8 sm:py-8 lg:py-16  gap-8 lg:gap-4 z-10" >
+    <div className="w-screen sticky top-20 md:top-24 bg-white lg:bg-transparent flex flex-col sm:flex-row lg:w-96 justify-between items-center  lg:flex-col lg:items-start px-4 sm:px-8 lg:px-4 py-8 sm:py-8 lg:py-16  gap-8 lg:gap-4 z-10" >
       <div className="flex w-full sm:w-fit justify-between items-center">
         <div>
           <h1 className="text-xl text-[#496623] font-bold "> CATEGORIAS </h1>
