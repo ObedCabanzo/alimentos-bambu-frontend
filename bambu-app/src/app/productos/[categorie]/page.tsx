@@ -21,10 +21,10 @@ type Props = {
   };
 };
 
-export default function CategoriePage({ categorie }: { categorie: string }) {
+export default function CategoriePage() {
   return (
       <div className=" lg:py-16 w-full " id="productstop">
-        <ContentSection categorie= {categorie} />
+        <ContentSection />
       </div>
   );
 }
