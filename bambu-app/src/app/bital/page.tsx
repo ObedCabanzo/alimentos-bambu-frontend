@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/logo_bital.png`,
+        width: 800,
+        height: 600,
         alt: "Logo Bital",
       },
     ],

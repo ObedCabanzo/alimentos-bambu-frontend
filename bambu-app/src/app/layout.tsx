@@ -10,6 +10,8 @@ export const metadata = {
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/logo_bambu.png`,
+        width: 800,
+        height: 600,
         alt: "Logo Alimentos Bambú",
       },
     ],
