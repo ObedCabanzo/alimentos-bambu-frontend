@@ -21,10 +21,10 @@ export const SearchBar = () => {
   return (
     
     <div className="flex items-center justify-between w-full border-gray-300 border-solid border-2 rounded-3xl px-4 py-2 gap-4" id="search">
-      <div className="flex h-full w-full justify-start gap-4">
+      <div className="flex h-full w-full justify-start items-center gap-4">
         <IconComponent
           iconName="icon_search"
-          className="h-full w-auto text-gray-300 "
+          className="h-6 sm:h-8 w-auto text-gray-300 "
           onClick={handleSearchChange}
         />
         <input
@@ -40,7 +40,7 @@ export const SearchBar = () => {
       </div>
       <IconComponent
         iconName="icon_close"
-        className="h-full w-auto "
+        className="h-6 sm:h-8 w-auto "
         style={{
           opacity: state.searchQuery.trim().length !== 0 ? 1 : 0.5,
           color: "black",
