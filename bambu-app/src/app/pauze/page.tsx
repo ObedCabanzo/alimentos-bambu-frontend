@@ -11,6 +11,16 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pauzë",
   description: "¿Necesitas un descanso? ¡Pauzë es la solución!",
+  openGraph: {
+    title: "Pauzë - Alimentos Bambú",
+    description: "¿Necesitas un descanso? ¡Pauzë es la solución!",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/logo_pauze.png`,
+        alt: "Logo Pauze",
+      },
+    ],
+  },
 };
 
 export default function PauzePage() {

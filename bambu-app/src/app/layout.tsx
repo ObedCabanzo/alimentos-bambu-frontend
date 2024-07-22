@@ -4,6 +4,16 @@ export const metadata = {
     template: "%s - Alimentos Bambú",
   },
   description: "Mezclas en polvo para preparar bebidas y alimentos",
+  openGraph: {
+    title: "Alimentos Bambú",
+    description: "Somos Alimentos Bambú, conoce nuestros servicios e increibles productos.",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/logo_bambu.png`,
+        alt: "Logo Alimentos Bambú",
+      },
+    ],
+  },
 };
 import "@/app/input.css";
 import { NavBar } from "@/components/ComponentNavbar/navbar";

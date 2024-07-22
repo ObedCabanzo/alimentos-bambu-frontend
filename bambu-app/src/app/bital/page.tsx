@@ -7,6 +7,17 @@ import BitalInfo from "@/config/dataPage_bital";
 
 export const metadata: Metadata = {
   title: "Bitäl",
+  description: "Bitäl es una marca de Alimentos Bambú - Mezclas en polvo para preparar bebidas y alimentos completamente veganos.",
+  openGraph: {
+    title: "Bitäl - Alimentos Bambú",
+    description: "Bitäl es una marca de Alimentos Bambú - Mezclas en polvo para preparar bebidas y alimentos completamente veganos.",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/logo_bital.png`,
+        alt: "Logo Bital",
+      },
+    ],
+  },
 };
 
 export default function BrandPage() {

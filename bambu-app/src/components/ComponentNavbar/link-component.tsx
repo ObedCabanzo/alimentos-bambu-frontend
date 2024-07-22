@@ -16,7 +16,7 @@ export const LinkComponent = ({
 }) => {
   const pathname = usePathname();
   const [isHover, setIsHover] = useState(false);
-  const isActive = pathname === href;
+  const isActive = pathname.split("/")[1].startsWith(href.split("/")[1]);
   const properties = getColorLink(pathname, isMenu );
 
   return (
