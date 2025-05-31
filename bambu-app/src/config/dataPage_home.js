@@ -66,21 +66,23 @@ const HomeInfo = {
       },
     ],
   },
-  pauze_section: {
-    items: [
-      {
-        id: 0,
-        description:
-          "Creemos firmemente que todo aquello que consumimos es parte de nosotros, y por ello, ofrecemos productos frescos, deliciosos y saludables que puedes consumir en nuestro local o puedes llevar a casa.",
-        icon: "icon_pauze_1",
-      },
-      {
-        id: 1,
-        description:
-          "Holaa Creemos firmemente que todo aquello que consumimos es parte de nosotros, y por ello, ofrecemos productos frescos, deliciosos y saludables que puedes consumir en nuestro local o puedes llevar a casa.",
-        icon: "icon_pauze_2",
-      },
-    ]
+  allies_section: {
+     items: [
+    {
+      id: 1,
+      name: "Agro S.A.",
+      details: "Líderes en la producción de insumos agrícolas orgánicos, comprometidos con la sostenibilidad.",
+      imageUrl: "/images/allies/agro-sa-banner.jpg", // Main visual for the ally
+      // logoIcon: "icon_agro_logo" // Optional, if you prefer an IconComponent
+    },
+    {
+      id: 2,
+      name: "Transportes Veloz",
+      details: "Socios logísticos eficientes, garantizando la entrega fresca y puntual de nuestros productos.",
+      imageUrl: "/images/allies/transportes-veloz-image.png",
+    },
+    // ... more allies
+  ],
   }
 };
 

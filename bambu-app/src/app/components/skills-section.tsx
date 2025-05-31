@@ -36,7 +36,6 @@ export default function SkillsSection({
     }[];
   };
 }) {
-  const router = useRouter();
   const iconClassname =
     "icon sm:h-16 w-12 h-12 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24";
 

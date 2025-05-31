@@ -12,7 +12,7 @@ export default function HomePage() {
       <BannerSection/>
       <CategoriesHomeSection info={HomeInfo.categories_section}/>
       <SkillsSection info={HomeInfo.skills_section}/>
-      <PauzeSection info={HomeInfo.pauze_section} />
+      <PauzeSection info={HomeInfo.allies_section} />
     </div>
   );
 }
